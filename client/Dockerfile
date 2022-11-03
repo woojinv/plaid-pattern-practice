@@ -4,6 +4,8 @@ COPY ["package.json", "/opt/client/"]
 COPY ["package-lock.json", "/opt/client/"]
 
 WORKDIR /opt/client
+COPY ["localhost-key.pem", "/opt/client"]
+COPY ["localhost.pem", "/opt/client"]
 
 RUN npm ci
 
